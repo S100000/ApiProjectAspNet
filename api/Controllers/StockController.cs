@@ -25,6 +25,18 @@ namespace api.Controllers
             var stock = _context.Stock.ToList().Select(s => s.ToStockDto());
             return Ok(stock);
         }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById([FromRoute] int id)
+        {
+            var stock = _context.Stock.FirstOrDefault(x => x.Id == id);
+
+            if(stock == null)
+            {
+                return NotFound();
+            }
+            return Ok(stock.ToStockDto());
+        }
         
     }
 }
