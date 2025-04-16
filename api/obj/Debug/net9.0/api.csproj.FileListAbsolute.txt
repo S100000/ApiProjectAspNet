@@ -324,3 +324,4 @@ C:\Users\José\Desktop\ApiProjectAspNet\api\obj\Debug\net9.0\refint\api.dll
 C:\Users\José\Desktop\ApiProjectAspNet\api\obj\Debug\net9.0\api.pdb
 C:\Users\José\Desktop\ApiProjectAspNet\api\obj\Debug\net9.0\api.genruntimeconfig.cache
 C:\Users\José\Desktop\ApiProjectAspNet\api\obj\Debug\net9.0\ref\api.dll
+C:\Users\José\Desktop\ApiProjectAspNet\api\obj\Debug\net9.0\api.sourcelink.json
