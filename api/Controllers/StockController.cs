@@ -70,6 +70,22 @@ namespace api.Controllers
             _context.SaveChanges();
             return Ok(stockmodel.ToStockDto());
         }
+
+        [HttpDelete]
+        [Route("{id}")]
+        public IActionResult Delete([FromRoute] int id)
+        {
+            var stockmodel = _context.Stock.FirstOrDefault(x => x.Id == id);
+            if(stockmodel == null)
+            {
+                return NotFound();
+            }
+
+            _context.Stock.Remove(stockmodel);
+            _context.SaveChanges();
+
+            return NoContent();
+        }
         
     }
 }
