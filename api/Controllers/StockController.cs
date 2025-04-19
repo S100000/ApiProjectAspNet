@@ -48,6 +48,28 @@ namespace api.Controllers
 
             return CreatedAtAction(nameof(GetById), new{ id = stockModel.Id }, stockModel.ToStockDto());
         }
+
+        [HttpPut]
+        [Route("{id}")]
+        public IActionResult UpdateById([FromRoute] int id, [FromBody] UpdateStockRequestDto stockDto)
+        {
+            var stockmodel = _context.Stock.FirstOrDefault(x => x.Id == id);
+            
+            if(stockmodel == null)
+            {
+                return NotFound();
+            }
+
+            stockmodel.Industry = stockDto.Industry;
+            stockmodel.Symbol = stockDto.Symbol;
+            stockmodel.Purchase = stockDto.Purchase;
+            stockmodel.MarketCap = stockDto.MarketCap;
+            stockmodel.LastDiv = stockDto.LastDiv;
+            stockmodel.CompanyName = stockDto.CompanyName;
+
+            _context.SaveChanges();
+            return Ok(stockmodel.ToStockDto());
+        }
         
     }
 }
