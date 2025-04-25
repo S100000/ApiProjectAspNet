@@ -18,6 +18,11 @@ namespace api.Repository
             _context = context;
         }
 
+        public async Task<bool> CheckStock(int id)
+        {
+            return await _context.Stock.AnyAsync(s => s.Id == id);//AnyAsync() check if exist, if does'nt exist going to return null
+        }
+
         public async Task<Stock> CrateAsync(Stock stockModel)
         {
             await _context.Stock.AddAsync(stockModel);

@@ -14,5 +14,6 @@ namespace api.Interfaces
         Task<Stock> CrateAsync(Stock stockModel);
         Task<Stock?> UpdateAsync(int id, UpdateStockRequestDto stockDto);
         Task<Stock?> DeleteAsync(int id);
+        Task<bool> CheckStock(int id);
     }
 }
