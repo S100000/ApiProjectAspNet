@@ -325,3 +325,7 @@ C:\Users\José\Desktop\ApiProjectAspNet\api\obj\Debug\net9.0\api.pdb
 C:\Users\José\Desktop\ApiProjectAspNet\api\obj\Debug\net9.0\api.genruntimeconfig.cache
 C:\Users\José\Desktop\ApiProjectAspNet\api\obj\Debug\net9.0\ref\api.dll
 C:\Users\José\Desktop\ApiProjectAspNet\api\obj\Debug\net9.0\api.sourcelink.json
+C:\Users\José\Desktop\ApiProjectAspNet\api\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\José\Desktop\ApiProjectAspNet\api\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\José\Desktop\ApiProjectAspNet\api\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\José\Desktop\ApiProjectAspNet\api\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll

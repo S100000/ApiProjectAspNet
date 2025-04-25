@@ -14,6 +14,12 @@ builder.Services.AddDbContext<AppDbContext>(options => {
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<IStock, StockRepository>();
+builder.Services.AddScoped<IComment, CommentRepository>();
+
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+});
 
 var app = builder.Build();
 

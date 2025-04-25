@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using api.Dto.CommentsDto;
 
 namespace api.Dto
 {
@@ -17,5 +18,6 @@ namespace api.Dto
         public decimal LastDiv { get; set; }
         public string Industry { get; set; } = string.Empty;
         public long MarketCap { get; set; }
+        public List<CommentDto> Comments {get; set;} = new List<CommentDto>();
     }
 }
