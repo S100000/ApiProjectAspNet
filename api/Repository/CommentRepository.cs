@@ -43,5 +43,19 @@ namespace api.Repository
 
             return comment;
         }
+
+        public async Task<Comments> UpdateAsync(int id, UpdateCommentDto commentDto)
+        {
+            var commentModel = await _context.Comments.FirstOrDefaultAsync(c => c.Id == id);
+            if(commentModel == null)
+            {
+                return null;
+            }
+
+            commentModel.Content = commentDto.Content;
+            commentModel.Title = commentDto.Title;
+            await _context.SaveChangesAsync();
+            return commentModel;
+        }
     }
 }
