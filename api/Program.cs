@@ -2,6 +2,7 @@ using api.Data;
 using api.Interfaces;
 using api.Models;
 using api.Repository;
+using api.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -55,6 +56,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddScoped<IStock, StockRepository>();
 builder.Services.AddScoped<IComment, CommentRepository>();
+builder.Services.AddScoped<ITokenService, TokenService>();
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
